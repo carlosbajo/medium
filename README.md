@@ -1,4 +1,4 @@
-# DevDraws test/example projects :)
+# Medium test/example projects :)
 
 
 ![type - learning](https://img.shields.io/static/v1?label=type&message=learning&color=%2328A49E&logo=futurelearn) [![LIcense - MIT](https://img.shields.io/static/v1?label=LIcense&message=MIT&color=EC7505)](LICENSE.md) 
