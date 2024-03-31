@@ -9,32 +9,33 @@ Before proceeding with the setup, ensure you have Node.js and npm installed on y
 ### 1. Install the serve Package
 First, you need to install the serve package globally using npm. This package allows you to serve static files from any directory through a local server. Open a terminal and run the following command:
 
-shell
-Copy code
+
+```shell
 npm install serve -g
+```
 ### 2. Start the Sample HTML Application
 Navigate to the project directory where the sample HTML application resides. In the same directory, open a terminal and execute the following command to start the local server:
 
-shell
-Copy code
+```shell
 serve .
+```
 This command serves the sample HTML application on a local server. Ensure this server is kept running as you proceed with the next steps.
 
 ### 3. Install Project Dependencies
 Open a new terminal window (without closing the server from the previous step) and navigate to the project directory again. Install the necessary Node.js dependencies for the project by running:
 
-shell
-Copy code
+```shell
 npm install
+```
 This command installs all dependencies listed in the project's package.json file, which includes Puppeteer for web scraping.
 
 ### 4. Run the Puppeteer Script
 With the dependencies installed and the server running, you can now execute the Puppeteer script to scrape content from the Shadow DOM. Run the following command in the terminal:
 
-shell
-Copy code
+
+```shell
 node scraper.js
-Note: The filename is corrected from scrapper.js to scraper.js to follow conventional spelling.
+```
 
 ### 5. View Results
 After executing the script, you should see the scraped content displayed in the console. This confirms that the setup is successful and the script is able to access and scrape content from the Shadow DOM.
