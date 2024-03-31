@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Label Component</title>
+  </head>
+  <body>
+    <!-- Use our custom component -->
+    <simple-label id="first-label"></simple-label>
+
+    <!-- Use our custom component nested -->
+    <simple-nested-label id="nested-component"></simple-nested-label>
+
+    <div id="second-label-container">
+      <simple-label></simple-label>
+    </div>
+
+    <script>
+      class SimpleLabel extends HTMLElement {
+        constructor() {
+          super();
+          const shadow = this.attachShadow({ mode: "open" });
+          const wrapper = document.createElement("span");
+          wrapper.textContent = "This is some text inside the shadow DOM.";
+          wrapper.id = "my-cool-text";
+          shadow.appendChild(wrapper);
+        }
+      }
+      class SimpleNestedElement extends HTMLElement {
+        constructor() {
+          super();
+          const shadow = this.attachShadow({ mode: "open" });
+          const wrapper = document.createElement("div");
+          const simpleLabel = document.createElement("simple-label");
+          wrapper.id = "nested-container";
+          wrapper.appendChild(simpleLabel);
+          shadow.appendChild(wrapper);
+        }
+      }
+
+      customElements.define("simple-nested-label", SimpleNestedElement);
+      customElements.define("simple-label", SimpleLabel);
+    </script>
+  </body>
+</html>
